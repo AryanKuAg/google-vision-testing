@@ -69,4 +69,12 @@ def columnWiseToList(rawData):
         finalColumnSeperatedList[index][3].append(
             str(element[folioNumberIndex + 6:nameLastIndex]).strip())
 
+        ##################################################################################
+
+        # OPen and closed
+        if 'OPEN' in element:
+            finalColumnSeperatedList[index][5].append("OPEN")
+        elif "CLOSED" in element:
+            finalColumnSeperatedList[index][5].append("CLOSED")
+
     print(finalColumnSeperatedList)
